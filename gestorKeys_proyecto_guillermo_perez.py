@@ -30,27 +30,21 @@ def menu():
         opcion=int(input("Introduce una opcion: "))
         if opcion==1:
             linea=generarKey()
-            guardaCSV(linea)
+        guardaCSV(linea)
+        elif opcion==2:
+            pedirKey()
+        elif opcion==3:
+            introducirKey()
+        elif opcion==4:
+            regenerarKey()
+        elif opcion==5:
+            borrarKey()
+        elif opcion==6:
+            listadoKeys()
+        elif opcion==0:
+            menu=False
         else:
-            if opcion==2:
-                pedirKey()
-            else:
-                if opcion==3:
-                    introducirKey()
-                else:
-                    if opcion==4:
-                        regenerarKey()
-                    else:
-                        if opcion==5:
-                            borrarKey()
-                        else:
-                            if opcion==6:
-                                listadoKeys()
-                            else:
-                                if opcion==0:
-                                    menu=False
-                                else:
-                                    print("\nERROR: Introduce una opcion valida\n")
+            print("\nERROR: Introduce una opcion valida\n")
 
 #Generar Contraseña (apila en una lista los datos para escribirlo en el csv en la funcion guardaCSV
 def generarKey(): #Añadir seleccion de caracteres y asegurar que haya 1 numero al menos en lo generado    clear()
