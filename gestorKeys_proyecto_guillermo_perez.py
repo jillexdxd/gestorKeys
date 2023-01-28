@@ -30,7 +30,7 @@ def menu():
         opcion=int(input("Introduce una opcion: "))
         if opcion==1:
             linea=generarKey()
-        guardaCSV(linea)
+            guardaCSV(linea)
         elif opcion==2:
             pedirKey()
         elif opcion==3:
